@@ -5,10 +5,14 @@
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-    <script> src = "/Users/lukaslabrie/rockPaperScissors/external.js"
+    <script> src = "/Users/lukaslabrie/rockPaperScissors/external.js" // external JS script
     function computerChoice() {
-        const choices = ["rock", "paper" ,"scissors"];
-        const random = Math.floor(Math.random() * choices.length);
+        const choices = ["rock", "paper" ,"scissors"]; // array for cpu to choose from
+        const random = Math.floor(Math.random() * choices.length); // built in functions for JS
+        //.random generates a random floating point less than 1
+        //.floor rounds the number to the nearest whole number
+        //by multiplying by length (which is 3) the floating point can be greater than 1
+        //doing this will aloow for all choices to generate
 }
 computerChoice()
      console.log(computerChoice);
