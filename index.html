@@ -6,7 +6,7 @@
 </head>
 <body>
     <script> src = "/Users/lukaslabrie/rockPaperScissors/external.js" // external JS script
-    function computerChoice() {
+    function getComputerChoice(cpuChoice) {
         const choices = ["rock", "paper" ,"scissors"]; // array for cpu to choose from
         const selection = Math.floor(Math.random() * choices.length); // built in functions for JS
         //.random generates a random floating point less than 1
@@ -14,8 +14,8 @@
         //by multiplying by length (which is 3) the floating point can be greater than 1
         //doing this will aloow for all choices to generate
 }
-computerChoice()
-     console.log(selection);
+getComputerChoice()
+     console.log(getComputerChoice());
     </script>
 
 </body>
