@@ -8,7 +8,8 @@
     <script> src = "/Users/lukaslabrie/rockPaperScissors/external.js" // external JS script
     function getComputerChoice(cpuChoice) {
         const choices = ["rock", "paper" ,"scissors"]; // array for cpu to choose from
-        const selection = Math.floor(Math.random() * choices.length); // built in functions for JS
+        const selection = Math.floor(Math.random() * choices.length);  // built in functions for JS
+        return choices [selection]; // this will send random choice to output
         //.random generates a random floating point less than 1
         //.floor rounds the number to the nearest whole number
         //by multiplying by length (which is 3) the floating point can be greater than 1
