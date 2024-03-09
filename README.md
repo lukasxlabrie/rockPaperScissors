@@ -27,4 +27,25 @@ This is one of my first programming projects, and I'd love to hear your thoughts
 
 ## License
 
-This project is open source and available under the [MIT
+This project is open source and available under the [MIT}
+
+## Psuedo Code
+// Start the game
+GET user's choice
+
+// Generate computer's choice randomly
+GENERATE computer's choice
+
+// Display both choices
+OUTPUT "Your choice: " + user's choice + "; Computer's choice: " + computer's choice
+
+// Determine the winner
+IF user's choice BEATS computer's choice THEN
+    OUTPUT "You won!"
+ELSE IF computer's choice BEATS user's choice THEN
+    OUTPUT "You lost!"
+ELSE
+    OUTPUT "It's a draw!"
+
+// End the game
+
