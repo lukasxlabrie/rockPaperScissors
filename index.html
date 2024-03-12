@@ -22,7 +22,8 @@ function playRound() {
     const choices = ["rock", "paper", "scissors"];
     let resultMessage = "";
 
-    if (playerInput === cpuSelection) {
+    //commpares choices, basically the game loop
+    if (playerInput === cpuSelection) {                                  
         resultMessage = "It's a tie!";
     } else if ((playerInput === "paper" && cpuSelection === "rock") ||
                (playerInput === "rock" && cpuSelection === "scissors") ||
