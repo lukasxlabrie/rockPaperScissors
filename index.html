@@ -6,7 +6,7 @@
 </head>
 <body>
     <script> src = "/Users/lukaslabrie/rockPaperScissors/external.js" // external JS script
-    function getComputerChoice(cpuChoice) {
+    function getComputerChoice(cpuSelection) {
         const choices = ["rock", "paper" ,"scissors"]; // array for cpu to choose from
         const selection = Math.floor(Math.random() * choices.length);  // built in functions for JS
         return choices [selection]; // this will send random choice to output
@@ -16,6 +16,14 @@
         //doing this will aloow for all choices to generate
 }
 getComputerChoice()
+
+function playRound (playerSelection, cpuSelection) {
+    const playerInput = prompt ("Please enter your selection: ")
+
+
+
+}
+
      console.log(getComputerChoice());
     </script>
 
