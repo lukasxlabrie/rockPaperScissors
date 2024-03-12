@@ -18,27 +18,25 @@
 getComputerChoice()
 
 function playRound() {
-    const playerInput = prompt("Please enter your selection: ").toLowerCase(); // normalize input to lowercase
+    const playerSelection = prompt("Please enter your selection: ").toLowerCase(); // normalize input to lowercase
     const choices = ["rock", "paper", "scissors"];
     let resultMessage = "";
 
     //commpares choices, basically the game loop
-    if (playerInput === cpuSelection) {                                  
+    if (playerSelection === cpuSelection) {                                  
         resultMessage = "It's a tie!";
-    } else if ((playerInput === "paper" && cpuSelection === "rock") ||
-               (playerInput === "rock" && cpuSelection === "scissors") ||
-               (playerInput === "scissors" && cpuSelection === "paper")) {
-        resultMessage = `You win, ${playerInput} beats ${cpuSelection}!`;
+    } else if ((playerSelection === "paper" && cpuSelection === "rock") ||
+               (playerSelection === "rock" && cpuSelection === "scissors") ||
+               (playerSelection === "scissors" && cpuSelection === "paper")) {
+        resultMessage = `You win, ${playerSelection} beats ${cpuSelection}!`;
     } else {
-        resultMessage = `You lost. ${cpuSelection} beats ${playerInput}.`;
+        resultMessage = `You lost. ${cpuSelection} beats ${playerSelection}.`;
     }
 
     alert(resultMessage);
 }
 
-
-
-     console.log(getComputerChoice());
+console.log(playRound(playerSelection, computerSelection));
     </script>
 
 </body>
