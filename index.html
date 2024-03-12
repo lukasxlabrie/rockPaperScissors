@@ -17,26 +17,25 @@
 }
 getComputerChoice()
 
-function playRound (playerSelection, cpuSelection) {
-    const playerInput = prompt ("Please enter your selection: "); // ask user for input
-    if (playerSelection == cpuSelection) //it's a tie
-    alert("it's a tie");
+function playRound() {
+    const playerInput = prompt("Please enter your selection: ").toLowerCase(); // Normalize input to lowercase
+    const choices = ["rock", "paper", "scissors"];
+    let resultMessage = "";
 
-    if (playerSelection == "paper" & cpuSelection == "rock") //paper beats rock
-    alert ("You win, paper beats rock!");
-    else (playerSelection == "rock" & cpuSelection == "paper")
-    alert ("You lost. Paper beats rock.")
+    if (playerInput === cpuSelection) {
+        resultMessage = "It's a tie!";
+    } else if ((playerInput === "paper" && cpuSelection === "rock") ||
+               (playerInput === "rock" && cpuSelection === "scissors") ||
+               (playerInput === "scissors" && cpuSelection === "paper")) {
+        resultMessage = `You win, ${playerInput} beats ${cpuSelection}!`;
+    } else {
+        resultMessage = `You lost. ${cpuSelection} beats ${playerInput}.`;
+    }
 
-    if (playerSelection == "rock" & cpuSelection == "scissors") //rock beats scissors
-    alert ("You win, rock beats scissors!");
-    else (playerSelection == "paper" & cpuSelection == "rock")
-    alert ("You lost. Rock beats paper.")
-
-
-
-
-
+    alert(resultMessage);
 }
+
+
 
      console.log(getComputerChoice());
     </script>
