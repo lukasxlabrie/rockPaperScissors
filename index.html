@@ -22,7 +22,7 @@ function playRound() {
     const choices = ["rock", "paper", "scissors"];
     let resultMessage = "";
 
-    //commpares choices, basically the game loop
+    //commpares choices, determines winner, and prints the results
     if (playerSelection === cpuSelection) {                                  
         resultMessage = "It's a tie!";
     } else if ((playerSelection === "paper" && cpuSelection === "rock") ||
