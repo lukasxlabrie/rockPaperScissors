@@ -22,8 +22,13 @@ function playRound (playerSelection, cpuSelection) {
     if (playerSelection == cpuSelection) //it's a tie
     alert("it's a tie");
 
-    if (playerSelection == "rock" & cpuSelection == "paper") 
-    alert ("You win, rock beats paper!");
+    if (playerSelection == "paper" & cpuSelection == "rock") //paper beats rock
+    alert ("You win, paper beats rock!");
+    else (playerSelection == "rock" & cpuSelection == "paper")
+    alert ("You lost. Paper beats rock.")
+
+    if (playerSelection == "rock" & cpuSelection == "scissors") //rock beats scissors
+    alert ("You win, rock beats scissors!");
     else (playerSelection == "paper" & cpuSelection == "rock")
     alert ("You lost. Rock beats paper.")
 
