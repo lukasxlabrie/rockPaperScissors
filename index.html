@@ -17,11 +17,12 @@
 }
 getComputerChoice()
 
-function playRound() {
+function playRound(getComputerChoice) {
     const playerSelection = prompt("Please enter your selection: ").toLowerCase(); // normalize input to lowercase
     const choices = ["rock", "paper", "scissors"];
     let resultMessage = "";
 
+    getComputerChoice ();
     //commpares choices, determines winner, and prints the results
     if (playerSelection === cpuSelection) {                                  
         resultMessage = "It's a tie!";
