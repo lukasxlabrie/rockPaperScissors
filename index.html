@@ -13,8 +13,6 @@
 
     <div id="scoreboard">
     <h2>SCOREBOARD</h2>
-    <p id="player-score">PLAYER SCORE</p>
-    <p id="cpu-score">CPU SCORE</p>
     </div>
 
     <script>
@@ -77,12 +75,12 @@ function playRound() {
 
 
     //when button is clicked start round with click set as users choice
-    document.querySelector("#rbutton").addEventLsitener("click", () => {
+    document.querySelector("rbutton").addEventLsitener("click", () => {
         playerSelection === "rock";
         playRound ();
     })
 
-    document.querySelector("#pbutton").addEventLsitener("click", () => {
+    document.querySelector("pbutton").addEventLsitener("click", () => {
         playerSelection === "paper";
         playRound ();
     })
