@@ -16,19 +16,19 @@
     const sButton = document.createElement ("button");
     sButton.textContent = "Scissors";
 
-    //when button is clicked start round with click as users choice
+    //when button is clicked start round with click set as users choice
     document.querySelector("#rbutton").addEventLsitener("click", () => {
-        userSelection === "rock";
+        playerSelection === "rock";
         playRound ();
     })
 
     document.querySelector("#pbutton").addEventLsitener("click", () => {
-        userSelection === "paper";
+        playerSelection === "paper";
         playRound ();
     })
 
     document.querySelector("spbutton").addEventLsitener("click", () => {
-        userSelection === "scissors";
+        playerSelection === "scissors";
         playRound ();
     })
     function getComputerChoice() {
