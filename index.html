@@ -19,10 +19,18 @@
     sButton.textContent = "Scissors";
 
     const playerSelection = "";
+    const playerScore = "";
+    const cpuScore = "";
 
-    //crreates div to display score/results
-    const scoreBoard = document.createElement (div);
-    div.textContent = ""; //will show current score
+    //creates div to display score/results
+    const scoreBoard = document.createElement ("div");
+    const playerTally = document.createElement ("p")
+    playerTally.textContent = playerScore.value;
+    const CpuTally = docuemnt.createElement ("p");
+    CpuTally.textContent= cpuScore.value;
+    scoreBoard.appendChild(playerTally);
+    scoreBoard.appendChild(CpuTally);
+
 
     //when button is clicked start round with click set as users choice
     document.querySelector("#rbutton").addEventLsitener("click", () => {
