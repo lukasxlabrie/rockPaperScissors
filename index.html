@@ -30,26 +30,6 @@
     scoreBoard.appendChild(playerTally);
     scoreBoard.appendChild(CpuTally);
 
-
-    //when button is clicked start round with click set as users choice
-    document.querySelector("#rbutton").addEventLsitener("click", () => {
-        playerSelection === "rock";
-        playRound ();
-    })
-
-    document.querySelector("#pbutton").addEventLsitener("click", () => {
-        playerSelection === "paper";
-        playRound ();
-    })
-
-    document.querySelector("spbutton").addEventLsitener("click", () => {
-        playerSelection === "scissors";
-        playRound ();
-    })
-
-
-    console.log(playerSelection);
-
     function getComputerChoice() {
         const choices = ["rock", "paper" ,"scissors"]; // array for cpu to choose from
         const selection = Math.floor(Math.random() * choices.length);  // built in functions for JS
@@ -80,6 +60,25 @@ function playRound() {
     alert(resultMessage);
 }
 
+
+    //when button is clicked start round with click set as users choice
+    document.querySelector("#rbutton").addEventLsitener("click", () => {
+        playerSelection === "rock";
+        playRound ();
+    })
+
+    document.querySelector("#pbutton").addEventLsitener("click", () => {
+        playerSelection === "paper";
+        playRound ();
+    })
+
+    document.querySelector("spbutton").addEventLsitener("click", () => {
+        playerSelection === "scissors";
+        playRound ();
+    })
+
+
+    console.log(playerSelection);
 
 
 function playGame () {
