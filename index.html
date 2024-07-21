@@ -16,6 +16,10 @@
     const sButton = document.createElement ("button");
     sButton.textContent = "Scissors";
 
+    //crreates div to display score/results
+    const scoreBoard = document.createElement (div);
+    div.textContent = ""; //will show current score
+
     //when button is clicked start round with click set as users choice
     document.querySelector("#rbutton").addEventLsitener("click", () => {
         playerSelection === "rock";
@@ -33,7 +37,7 @@
     })
 
     console.log(playerSelection);
-    
+
     function getComputerChoice() {
         const choices = ["rock", "paper" ,"scissors"]; // array for cpu to choose from
         const selection = Math.floor(Math.random() * choices.length);  // built in functions for JS
