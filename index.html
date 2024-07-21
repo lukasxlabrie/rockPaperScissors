@@ -11,11 +11,11 @@
     <button id="paper">PAPER</button>
     <button id="scissors">SCISSORS</button>
 
-    <container id="scoreboard">
+    <div id="scoreboard">
     <h2>SCOREBOARD</h2>
     <p id="player-score">PLAYER SCORE</p>
     <p id="cpu-score">CPU SCORE</p>
-    </container>
+    </div>
 
     <script>
     const playerSelection = "";
@@ -29,8 +29,8 @@
 
     //creates div to display score/results
     const scoreBoard = document.createElement ("div");
-    const playerTally = document.createElement ("p");
-    const CpuTally = docuemnt.createElement ("p");
+    const playerTally = document.createElement ("#player-score");
+    const CpuTally = docuemnt.createElement ("#cpu-score");
     scoreBoard.appendChild(playerTally);
     scoreBoard.appendChild(CpuTally); 
 
