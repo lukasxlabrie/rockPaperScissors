@@ -16,10 +16,21 @@
     const sButton = document.createElement ("button");
     sButton.textContent = "Scissors";
 
-    document.querySelectorAll(button).addEventLsitener("click", () => {
-
+    //when button is clicked start round with click as users choice
+    document.querySelector("#rbutton").addEventLsitener("click", () => {
+        userSelection === "rock";
+        playRound ();
     })
 
+    document.querySelector("#pbutton").addEventLsitener("click", () => {
+        userSelection === "paper";
+        playRound ();
+    })
+
+    document.querySelector("spbutton").addEventLsitener("click", () => {
+        userSelection === "scissors";
+        playRound ();
+    })
     function getComputerChoice() {
         const choices = ["rock", "paper" ,"scissors"]; // array for cpu to choose from
         const selection = Math.floor(Math.random() * choices.length);  // built in functions for JS
