@@ -55,8 +55,10 @@ function playRound() {
                (playerSelection === "rock" && cpuSelection === "scissors") ||
                (playerSelection === "scissors" && cpuSelection === "paper")) {
         resultMessage = `You win, ${playerSelection} beats ${cpuSelection}!`;
+        playerScore++;
     } else {
         resultMessage = `You lost. ${cpuSelection} beats ${playerSelection}.`;
+        cpuScore++;
     }
 
     alert(resultMessage);
