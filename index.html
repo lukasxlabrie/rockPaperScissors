@@ -27,10 +27,21 @@
     const pButton = document.createElement ("button");
     const sButton = document.createElement ("button");
 
-    //creates div to display score/results
-    const scoreBoard = document.createElement ("div");
-    const playerTally = document.createElement ("#player-score");
-    const CpuTally = docuemnt.createElement ("#cpu-score");
+// Reference to the existing scoreboard element
+const scoreBoard = document.querySelector("#scoreboard");
+
+// Create and append player score paragraph
+const playerTally = document.createElement("p");
+playerTally.id = "player-score";
+playerTally.textContent = "PLAYER SCORE: 0"; // Initial score
+scoreBoard.appendChild(playerTally);
+
+// Create and append CPU score paragraph
+const cpuTally = document.createElement("p");
+cpuTally.id = "cpu-score";
+cpuTally.textContent = "CPU SCORE: 0"; // Initial score
+scoreBoard.appendChild(cpuTally);
+
 
     function getComputerChoice() {
         const choices = ["rock", "paper" ,"scissors"]; // array for cpu to choose from
