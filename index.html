@@ -16,6 +16,8 @@
     const sButton = document.createElement ("button");
     sButton.textContent = "Scissors";
 
+    const playerSelection = "";
+    
     //crreates div to display score/results
     const scoreBoard = document.createElement (div);
     div.textContent = ""; //will show current score
@@ -36,6 +38,7 @@
         playRound ();
     })
 
+
     console.log(playerSelection);
 
     function getComputerChoice() {
@@ -51,7 +54,6 @@
 getComputerChoice()
 
 function playRound() {
-    const playerSelection = prompt("Please enter your selection: ").toLowerCase(); // normalize input to lowercase
     const cpuSelection = getComputerChoice (); 
     const choices = ["rock", "paper", "scissors"];
     let resultMessage = "";
