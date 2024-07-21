@@ -7,6 +7,12 @@
 <body>
     <script src="/path/to/your/external.js"></script>// external JS script
     <script>
+
+    // creates three buttons, one per choice, in DOM memory
+    const rButton = document.createElement ("button");
+    const pButton = document.createElement ("button");
+    const sButton = document.createElement ("button");
+
     function getComputerChoice() {
         const choices = ["rock", "paper" ,"scissors"]; // array for cpu to choose from
         const selection = Math.floor(Math.random() * choices.length);  // built in functions for JS
@@ -37,14 +43,6 @@ function playRound() {
 
     alert(resultMessage);
 }
-
-// creates three buttons, one per choice, in DOM memory
-const rButton = document.createElement ("button");
-const pButton = document.createElement ("button");
-const sButton = document.createElement ("button");
-
-
-
 
 
 
