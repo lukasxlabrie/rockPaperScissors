@@ -10,8 +10,15 @@
 
     // creates three buttons, one per choice, in DOM memory
     const rButton = document.createElement ("button");
+    rButton.textContent = "Rock";
     const pButton = document.createElement ("button");
+    pButton.textContent = "Paper";
     const sButton = document.createElement ("button");
+    sButton.textContent = "Scissors";
+
+    document.querySelectorAll(button).addEventLsitener("click", () => {
+
+    })
 
     function getComputerChoice() {
         const choices = ["rock", "paper" ,"scissors"]; // array for cpu to choose from
