@@ -31,6 +31,9 @@
         playerSelection === "scissors";
         playRound ();
     })
+
+    console.log(playerSelection);
+    
     function getComputerChoice() {
         const choices = ["rock", "paper" ,"scissors"]; // array for cpu to choose from
         const selection = Math.floor(Math.random() * choices.length);  // built in functions for JS
