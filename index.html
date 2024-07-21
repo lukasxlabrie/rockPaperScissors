@@ -75,8 +75,11 @@ function playRound() {
 
 
     //when button is clicked start round with click set as users choice
-    document.querySelector("rbutton").addEventLsitener("click", () => {
-        playerSelection === "rock";
+    document.querySelectorAll("button").addEventLsitener("click", () => {
+        if mouseClick === "rbutton", (playerSelection === "rock");
+        if mouseClick === "pbutton", (playerSelection === "paper");
+        if mouselcick === "sbutton", (playerSelection === "scissors");
+
         playRound ();
     })
 
