@@ -7,16 +7,15 @@
 <body>
     <h1> Rock, Paper Scissors!</h1>
     <p>Click a button below to make your choice and start the round</p>
-    <script src="/path/to/your/external.js"></script>
     <script>
 
     // creates three buttons, one per choice, in DOM memory
     const rButton = document.createElement ("button");
-    rButton.textContent = "Rock";
+    rButton.createTextNode ("Rock");
     const pButton = document.createElement ("button");
-    pButton.textContent = "Paper";
+    pButton.createTextNode ("Paper");
     const sButton = document.createElement ("button");
-    sButton.textContent = "Scissors";
+    sButton.createTextNode ("Scissors");
 
     const playerSelection = "";
     const playerScore = "";
