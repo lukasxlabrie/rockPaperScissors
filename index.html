@@ -7,10 +7,6 @@
 <body>
     <h1> Rock, Paper, Scissors</h1>
     <p>Click a button below to make your choice and start the round!</p>
-    <div id="scoreboard">
-    <h2>SCOREBOARD</h2>
-    </div>
-
     <script>
     const playerSelection = "";
     const playerScore = 0;
@@ -34,15 +30,16 @@
     //apend buttons to body
     document.body.appendChild(buttons);
 
-
-    // Reference to the existing scoreboard element
-    const scoreBoard = document.querySelector("#scoreboard");
-
     // Create and append player score paragraph
-    const playerTally = document.createElement("p");
-    playerTally.id = "player-score";
-    playerTally.textContent = "PLAYER SCORE: 0"; // Initial score
-    scoreBoard.appendChild(playerTally);
+    const scoreBoardTitle = document.createElement("h2");
+    scoreBoardTitle.textContent="SCOREBOARD";
+    document.body.appendChild(scoreBoardTitle);
+    const playerScoreBoard = document.createElement("p");
+    playerScoreBoard.textContent = "PLAYER SCORE: 0"; // Initial score
+    const compScoreBoard = document.createElement("p");
+    compScoreBoard.textContent = "COMPUTER SCORE: 0"; //initial score
+    document.body.appendChild(playerScoreBoard);
+    document.body.appendChild(compScoreBoard);
 
     // Create and append CPU score paragraph
     const cpuTally = document.createElement("p");
