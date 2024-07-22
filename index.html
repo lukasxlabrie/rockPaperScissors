@@ -16,7 +16,21 @@
     const playerScore = 0;
     const cpuScore = 0;
 
-    // creates three buttons, one per choice, append to div
+    // creates three buttons, one per choice, append to div, append to body
+    const buttons = document.createElement("div");
+    const rButton = document.createElement("button")
+    rButton.id="rock";
+    rButton.textContent="ROCK";
+    buttons.appendChild(rButton);
+    const pButton = document.createElement("button");
+    pButton.id="Paper";
+    pButton.textContent="PAPER";
+    buttons.appendChild(pButton);
+    const sButton = document.createElement("button");
+    sButton.id="Scissors";
+    sButton.textContent="SCISSORS";
+    buttons.appendChild(sButton);
+    document.body.appendChild(buttons);
 
 
     // Reference to the existing scoreboard element
