@@ -5,12 +5,8 @@
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-    <h1> Rock, Paper, Scissors!</h1>
+    <h1> Rock, Paper, Scissors</h1>
     <p>Click a button below to make your choice and start the round!</p>
-    <button id="rock">ROCK</button>
-    <button id="paper">PAPER</button>
-    <button id="scissors">SCISSORS</button>
-
     <div id="scoreboard">
     <h2>SCOREBOARD</h2>
     </div>
@@ -20,10 +16,16 @@
     const playerScore = 0;
     const cpuScore = 0;
 
-    // creates three buttons, one per choice, in DOM memory
+    // creates three buttons, one per choice, append to div
     const rButton = document.createElement ("button");
+    rbutton.id="rock";
     const pButton = document.createElement ("button");
+    pButton.id="paper";
     const sButton = document.createElement ("button");
+    sButton.id ="sciccors";
+    body.appendChild(rButton);
+    body.appendChild(pButton);
+    body.appendChild(sButton);
 
 // Reference to the existing scoreboard element
 const scoreBoard = document.querySelector("#scoreboard");
@@ -75,13 +77,13 @@ function playRound() {
 
 
     //when button is clicked start round with click set as users choice
-    document.querySelectorAll("button").addEventLsitener("click", () => {
-        if mouseClick === "rbutton", (playerSelection === "rock");
-        if mouseClick === "pbutton", (playerSelection === "paper");
-        if mouselcick === "sbutton", (playerSelection === "scissors");
+    //document.querySelectorAll("button").addEventLsitener("click", () => {
+        //if mouseClick === "rButton", (playerSelection === "rock");
+       // if mouseClick === "pButton", (playerSelection === "paper");
+        //if mouselcick === "sButton", (playerSelection === "scissors");
 
-        playRound ();
-    })
+        //playRound ();
+   // })
 
     document.querySelector("pbutton").addEventLsitener("click", () => {
         playerSelection === "paper";
