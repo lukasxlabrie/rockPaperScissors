@@ -17,30 +17,22 @@
     const cpuScore = 0;
 
     // creates three buttons, one per choice, append to div
-    const rButton = document.createElement ("button");
-    rButton.id="rock";
-    const pButton = document.createElement ("button");
-    pButton.id="paper";
-    const sButton = document.createElement ("button");
-    sButton.id ="sciccors";
-    body.appendChild(rButton);
-    body.appendChild(pButton);
-    body.appendChild(sButton);
 
-// Reference to the existing scoreboard element
-const scoreBoard = document.querySelector("#scoreboard");
 
-// Create and append player score paragraph
-const playerTally = document.createElement("p");
-playerTally.id = "player-score";
-playerTally.textContent = "PLAYER SCORE: 0"; // Initial score
-scoreBoard.appendChild(playerTally);
+    // Reference to the existing scoreboard element
+    const scoreBoard = document.querySelector("#scoreboard");
 
-// Create and append CPU score paragraph
-const cpuTally = document.createElement("p");
-cpuTally.id = "cpu-score";
-cpuTally.textContent = "CPU SCORE: 0"; // Initial score
-scoreBoard.appendChild(cpuTally);
+    // Create and append player score paragraph
+    const playerTally = document.createElement("p");
+    playerTally.id = "player-score";
+    playerTally.textContent = "PLAYER SCORE: 0"; // Initial score
+    scoreBoard.appendChild(playerTally);
+
+    // Create and append CPU score paragraph
+    const cpuTally = document.createElement("p");
+    cpuTally.id = "cpu-score";
+    cpuTally.textContent = "CPU SCORE: 0"; // Initial score
+    scoreBoard.appendChild(cpuTally);
 
 
     function getComputerChoice() {
@@ -53,9 +45,9 @@ scoreBoard.appendChild(cpuTally);
         //doing this will aloow for all choices to generate
 }
 
-getComputerChoice();
+    getComputerChoice();
 
-function playRound() {
+    function playRound() {
     const cpuSelection = getComputerChoice (); 
     const choices = ["rock", "paper", "scissors"];
     let resultMessage = "";
