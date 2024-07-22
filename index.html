@@ -16,7 +16,7 @@
     const playerScore = 0;
     const cpuScore = 0;
 
-    // creates three buttons, one per choice, append to div, append to body
+    // creates three buttons, one per choice append to div
     const buttons = document.createElement("div");
     const rButton = document.createElement("button")
     rButton.id="rock";
@@ -30,6 +30,8 @@
     sButton.id="Scissors";
     sButton.textContent="SCISSORS";
     buttons.appendChild(sButton);
+
+    //apend buttons to body
     document.body.appendChild(buttons);
 
 
