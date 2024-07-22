@@ -5,12 +5,18 @@
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-    <h1> Rock, Paper, Scissors</h1>
-    <p>Click a button below to make your choice and start the round!</p>
     <script>
     const playerSelection = "";
     const playerScore = 0;
     const cpuScore = 0;
+
+    //header/title and info for game
+    const title = document.createElement("h1");
+    title.textContent = "ROCK, PAPER, SCISSORS."
+    document.body.appendChild(title);
+    const introText = document.createElement ("p");
+    introText.textContent = "Click a button to make your choice and start the game."
+    document.body.appendChild(introText);
 
     // creates three buttons, one per choice append to div
     const buttons = document.createElement("div");
