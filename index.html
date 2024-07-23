@@ -7,8 +7,8 @@
 <body>
     <script>
     let playerSelection = "";
-    const playerScore = 0;
-    const compScore = 0;
+    let playerScore = 0;
+    let compScore = 0;
 
     //header/title and info for game
     const title = document.createElement("h1");
@@ -73,7 +73,7 @@
         playerScore++;
     } else {
         resultMessage = `You lost. ${cpuSelection} beats ${playerSelection}.`;
-        cpuScore++;
+        compScore++;
     }
 
     alert(resultMessage);
