@@ -69,10 +69,10 @@
     } else if ((playerSelection === "paper" && cpuSelection === "rock") ||
                (playerSelection === "rock" && cpuSelection === "scissors") ||
                (playerSelection === "scissors" && cpuSelection === "paper")) {
-        resultMessage = `You win, ${playerSelection} beats ${cpuSelection}!`;
+        resultMessage = `You win! ${playerSelection.textContent} destroys ${cpuSelection.textContent}!`;
         playerScore++;
     } else {
-        resultMessage = `You lost. ${cpuSelection} beats ${playerSelection}.`;
+        resultMessage = `You lost. ${cpuSelection} mananges to beat ${playerSelection}.`;
         compScore++;
     }
 
