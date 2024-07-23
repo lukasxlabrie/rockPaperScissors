@@ -89,12 +89,16 @@
         //playRound ();
    // })
 
-    document.querySelector("pbutton").addEventLsitener("click", () => {
+    document.querySelector(rButton).addEventListener("click", () => {
+        playerSelection === "rock";
+    })
+
+    document.querySelector(pButton).addEventLsitener("click", () => {
         playerSelection === "paper";
         playRound ();
     })
 
-    document.querySelector("spbutton").addEventLsitener("click", () => {
+    document.querySelector(sBbutton).addEventLsitener("click", () => {
         playerSelection === "scissors";
         playRound ();
     })
