@@ -56,28 +56,6 @@
         //by multiplying by length (which is 3) the floating point can be greater than 1
         //doing this will aloow for all choices to generate
 }
-
-    getComputerChoice();
-
-    function playRound() {
-    const cpuSelection = getComputerChoice (); 
-    const choices = ["rock", "paper", "scissors"];
-    let resultMessage = "";
-    //commpares choices, determines winner, and prints the results
-    if (playerSelection === cpuSelection) {                                  
-        resultMessage = "It's a tie!";
-    } else if ((playerSelection === "paper" && cpuSelection === "rock") ||
-               (playerSelection === "rock" && cpuSelection === "scissors") ||
-               (playerSelection === "scissors" && cpuSelection === "paper")) {
-        resultMessage = `You win! ${playerSelection.textContent} destroys ${cpuSelection.textContent}!`;
-        playerScore++;
-    } else {
-        resultMessage = `You lost. ${cpuSelection} mananges to beat ${playerSelection}.`;
-        compScore++;
-    }
-
-    alert(resultMessage);
-}
     document.getElementById("rock").addEventListener("click", () => {
         let playerSelection = "rock";
         playRound ();
@@ -92,6 +70,30 @@
         let playerSelection = "scissors";
         playRound();
     })
+
+    getComputerChoice();
+
+    function playRound() {
+    const cpuSelection = getComputerChoice (); 
+    const choices = ["rock", "paper", "scissors"];
+    const playerBtnClick = playerSelection;
+    let resultMessage = "";
+    //commpares choices, determines winner, and prints the results
+    if (playerSelection === cpuSelection) {                                  
+        resultMessage = "It's a tie!";
+    } else if ((playerBtnClick === "paper" && cpuSelection === "rock") ||
+               (playerBtnClick=== "rock" && cpuSelection === "scissors") ||
+               (playerBtnClick=== "scissors" && cpuSelection === "paper")) {
+        resultMessage = `You win! ${playerBtnClick} destroys ${cpuSelection}!`;
+        playerScore++;
+    } else {
+        resultMessage = `You lost... ${cpuSelection} mananges to beat ${playerBtnClick}.`;
+        compScore++;
+    }
+
+    alert(resultMessage);
+    }
+
 
     </script>
 
