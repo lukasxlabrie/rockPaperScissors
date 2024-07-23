@@ -78,27 +78,16 @@
 
     alert(resultMessage);
 }
-
-
-    //when button is clicked start round with click set as users choice
-    //document.querySelectorAll("button").addEventLsitener("click", () => {
-        //if mouseClick === "rButton", (playerSelection === "rock");
-       // if mouseClick === "pButton", (playerSelection === "paper");
-        //if mouselcick === "sButton", (playerSelection === "scissors");
-
-        //playRound ();
-   // })
-
     document.getElementById("rock").addEventListener("click", () => {
-        playerSelection === "rock";
+        playerSelection = "rock";
     })
 
     document.getElementById("paper").addEventListener("click", () => {
-        playerSelection === "paper";
+        playerSelection = "paper";
     })
 
     document.getElementById("scissors").addEventListener("click", () => {
-        playerSelection === "scissors";
+        playerSelection = "scissors";
     })
 
 
