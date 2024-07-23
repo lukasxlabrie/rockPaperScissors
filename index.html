@@ -55,31 +55,15 @@
         //.floor rounds the number to the nearest whole number
         //by multiplying by length (which is 3) the floating point can be greater than 1
         //doing this will aloow for all choices to generate
-}
-    document.getElementById("rock").addEventListener("click", () => {
-        let playerSelection = "rock";
-        playRound ();
-    })
-
-    document.getElementById("paper").addEventListener("click", () => {
-        let playerSelection = "paper";
-        playRound ();
-    })
-
-    document.getElementById("scissors").addEventListener("click", () => {
-        let playerSelection = "scissors";
-        playRound();
-    })
-
-    getComputerChoice();
+    }
 
     function playRound() {
     const cpuSelection = getComputerChoice (); 
     const choices = ["rock", "paper", "scissors"];
-    const playerBtnClick = playerSelection;
+    const playerBtnClick = playerSelection.textContent;
     let resultMessage = "";
     //commpares choices, determines winner, and prints the results
-    if (playerSelection === cpuSelection) {                                  
+    if (playerBtnClick === cpuSelection) {                                  
         resultMessage = "It's a tie!";
     } else if ((playerBtnClick === "paper" && cpuSelection === "rock") ||
                (playerBtnClick=== "rock" && cpuSelection === "scissors") ||
@@ -92,7 +76,25 @@
     }
 
     alert(resultMessage);
-    }
+}
+    document.getElementById("rock").addEventListener("click", () => {
+        let playerSelection = "rock";
+        return playerSelection;
+        playRound ();
+    })
+
+    document.getElementById("paper").addEventListener("click", () => {
+        let playerSelection = "paper";
+        return playerSelection;
+        playRound ();
+    })
+
+    document.getElementById("scissors").addEventListener("click", () => {
+        let playerSelection = "scissors";
+        return playerSelection;
+        playRound();
+    })
+
 
 
     </script>
