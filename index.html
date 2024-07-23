@@ -41,9 +41,9 @@
     scoreBoardTitle.textContent="SCOREBOARD";
     document.body.appendChild(scoreBoardTitle);
     const playerScoreBoard = document.createElement("p");
-    playerScoreBoard.textContent = "PLAYER SCORE: 0"; // Initial score
+    playerScoreBoard.textContent = playerScore.value 
     const compScoreBoard = document.createElement("p");
-    compScoreBoard.textContent = "COMPUTER SCORE: 0"; //initial score
+    compScoreBoard.textContent = compScore.value;
     document.body.appendChild(playerScoreBoard);
     document.body.appendChild(compScoreBoard);
 
