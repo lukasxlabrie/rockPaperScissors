@@ -6,7 +6,7 @@
 </head>
 <body>
     <script>
-    const playerSelection = "";
+    let playerSelection = "";
     const playerScore = 0;
     const compScore = 0;
 
@@ -79,19 +79,20 @@
     alert(resultMessage);
 }
     document.getElementById("rock").addEventListener("click", () => {
-        playerSelection = "rock";
+        let playerSelection = "rock";
+        console.log(playerSelection);
+
     })
 
     document.getElementById("paper").addEventListener("click", () => {
-        playerSelection = "paper";
+        let playerSelection = "paper";
+        console.log(playerSelection);
     })
 
     document.getElementById("scissors").addEventListener("click", () => {
-        playerSelection = "scissors";
+        let playerSelection = "scissors";
+        console.log(playerSelection);
     })
-
-
-    console.log(playerSelection);
 
     </script>
 
