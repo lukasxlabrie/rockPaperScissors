@@ -60,14 +60,13 @@
     function playRound() {
     const cpuSelection = getComputerChoice (); 
     const choices = ["rock", "paper", "scissors"];
-    const playerBtnClick = playerSelection;
     let resultMessage = "";
     //commpares choices, determines winner, and prints the results
-    if (playerBtnClick === cpuSelection) {                                  
+    if (playerSelection === cpuSelection) {                                  
         resultMessage = "It's a tie!";
-    } else if ((playerBtnClick === "paper" && cpuSelection === "rock") ||
-               (playerBtnClick=== "rock" && cpuSelection === "scissors") ||
-               (playerBtnClick=== "scissors" && cpuSelection === "paper")) {
+    } else if ((playerSelection === "paper" && cpuSelection === "rock") ||
+               (playerSelection === "rock" && cpuSelection === "scissors") ||
+               (playerSelection === "scissors" && cpuSelection === "paper")) {
         resultMessage = `You win! ${playerBtnClick} destroys ${cpuSelection}!`;
         playerScore++;
     } else {
