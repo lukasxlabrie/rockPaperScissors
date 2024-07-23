@@ -47,13 +47,6 @@
     document.body.appendChild(playerScoreBoard);
     document.body.appendChild(compScoreBoard);
 
-    // Create and append CPU score paragraph
-    const cpuTally = document.createElement("p");
-    cpuTally.id = "cpu-score";
-    cpuTally.textContent = "CPU SCORE: 0"; // Initial score
-    scoreBoard.appendChild(cpuTally);
-
-
     function getComputerChoice() {
         const choices = ["rock", "paper" ,"scissors"]; // array for cpu to choose from
         const selection = Math.floor(Math.random() * choices.length);  // built in functions for JS
