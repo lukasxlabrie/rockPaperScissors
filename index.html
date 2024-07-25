@@ -5,51 +5,89 @@
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-    <script src="/path/to/your/external.js"></script>// external JS script
     <script>
+    let playerSelection = "";
+    let playerScore = 0;
+    let compScore = 0;
+
+    //header/title and info for game
+    const title = document.createElement("h1");
+    title.textContent = "ROCK, PAPER, SCISSORS";
+    document.body.appendChild(title);
+    const introText = document.createElement ("p");
+    introText.textContent = "Click a button to make your choice and start the game";
+    document.body.appendChild(introText);
+
+    // creates three buttons, one per choice append to div
+    const buttons = document.createElement("div");
+    const rButton = document.createElement("button");
+    rButton.id="rock";
+    rButton.textContent="ROCK";
+    buttons.appendChild(rButton);
+    const pButton = document.createElement("button");
+    pButton.id="paper";
+    pButton.textContent="PAPER";
+    buttons.appendChild(pButton);
+    const sButton = document.createElement("button");
+    sButton.id="scissors";
+    sButton.textContent="SCISSORS";
+    buttons.appendChild(sButton);
+
+    //apend buttons to body
+    document.body.appendChild(buttons);
+
+    // Create and append player score paragraph
+    const scoreBoardTitle = document.createElement("h2");
+    scoreBoardTitle.textContent="SCOREBOARD";
+    document.body.appendChild(scoreBoardTitle);
+    const playerScoreBoard = document.createElement("p");
+    playerScoreBoard.textContent = "PLAYER SCORE: 0"; // Initial score
+    const compScoreBoard = document.createElement("p");
+    compScoreBoard.textContent = "COMPUTER SCORE: 0"; //initial score
+    document.body.appendChild(playerScoreBoard);
+    document.body.appendChild(compScoreBoard);
+
     function getComputerChoice() {
         const choices = ["rock", "paper" ,"scissors"]; // array for cpu to choose from
         const selection = Math.floor(Math.random() * choices.length);  // built in functions for JS
-        return choices [selection]; // this will send random choice to output
-        //.random generates a random floating point less than 1
-        //.floor rounds the number to the nearest whole number
-        //by multiplying by length (which is 3) the floating point can be greater than 1
-        //doing this will aloow for all choices to generate
-}
-getComputerChoice()
-
-function playRound() {
-    const playerSelection = prompt("Please enter your selection: ").toLowerCase(); // normalize input to lowercase
-    const cpuSelection = getComputerChoice (); 
-    const choices = ["rock", "paper", "scissors"];
-    let resultMessage = "";
-    //commpares choices, determines winner, and prints the results
-    if (playerSelection === cpuSelection) {                                  
-        resultMessage = "It's a tie!";
-    } else if ((playerSelection === "paper" && cpuSelection === "rock") ||
-               (playerSelection === "rock" && cpuSelection === "scissors") ||
-               (playerSelection === "scissors" && cpuSelection === "paper")) {
-        resultMessage = `You win, ${playerSelection} beats ${cpuSelection}!`;
-    } else {
-        resultMessage = `You lost. ${cpuSelection} beats ${playerSelection}.`;
+        return choices[selection]; // this will send random choice to output
     }
 
-    alert(resultMessage);
-}
-//uses both functions to play the game! will play 5 rounds
-function playGame () {
-    playRound ();
-    playRound ();
-    playRound ();
-    playRound ();
-    playRound ();
+    function setPlayerSelection(choice) {
+        playerSelection = choice;
+        console.log("Player selected:", playerSelection);
+        playRound();  // Play a round whenever a player makes a selection
+    }
 
-}
+    // Add event listeners to buttons
+    document.getElementById("rock").addEventListener("click", () => setPlayerSelection("rock"));
+    document.getElementById("paper").addEventListener("click", () => setPlayerSelection("paper"));
+    document.getElementById("scissors").addEventListener("click", () => setPlayerSelection("scissors"));
 
-playGame ();
+    function playRound() {
+        const cpuSelection = getComputerChoice(); 
+        const choices = ["rock", "paper", "scissors"];
+        let resultMessage = "";
 
+        // compares choices, determines winner, and prints the results
+        if (playerSelection === cpuSelection) {                                  
+            resultMessage = "It's a tie!";
+        } else if ((playerSelection === "paper" && cpuSelection === "rock") ||
+                   (playerSelection === "rock" && cpuSelection === "scissors") ||
+                   (playerSelection === "scissors" && cpuSelection === "paper")) {
+            resultMessage = `You win! ${playerSelection} destroys ${cpuSelection}!`;
+            playerScore++;
+        } else {
+            resultMessage = `You lost... ${cpuSelection} beats ${playerSelection}.`;
+            compScore++;
+        }
 
-console.log(playGame());
+        // Update the scoreboard
+        playerScoreBoard.textContent = `PLAYER SCORE: ${playerScore}`;
+        compScoreBoard.textContent = `COMPUTER SCORE: ${compScore}`;
+
+        alert(resultMessage);
+    }
     </script>
 
 </body>
